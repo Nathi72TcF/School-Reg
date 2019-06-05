@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>School Registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+
+            <section class="container">
+                <h1>
+                    <script LANGUAGE="JavaScript">
+                        function getParams(){
+                        var idx = document.URL.indexOf('?');
+                        var params = new Array();
+                        if (idx != -1) {
+                        var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                        for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                        }
+                        }
+                        return params;
+                        }
+                        params = getParams();
+                        firstname = unescape(params["firstname"]);
+                        document.write("Hello "+ firstname);
+                    </script>
+                </h1>
+                <a href="landing.html">
+                    <button class="button button2">Back</button>
+                </a>
+            </section>
+
+    </body>
+
+</html>
